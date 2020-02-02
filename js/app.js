@@ -1,18 +1,19 @@
 $(window).scroll(function(){
     if ($(window).scrollTop() >= 10) {
-        $('header').addClass('fix');
+        $('.header-container').addClass('fix');
     }
     else {
-        $('header').removeClass('fix');
+        $('.header-container').removeClass('fix');
     }
 });
 $(function(){
-    $(".contact").click(function(){
+    $(".contact,.footer-contact, .banner-contact").click(function(){
         $("html, body").animate({
             scrollTop: $(".form").offset().top
         },"slow");
     })
-    $('.menu').on('click',function(){
+    $('header .menu').on('click',function(){
+        console.log("Yea")
         $(".nav-show-on-mobile").toggleClass('active')
         // $(".mainContent").toggleClass("active-content")
     });

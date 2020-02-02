@@ -13,6 +13,11 @@
     background-repeat: none;
     background-attachment: fixed;
 }
+.header-container{
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+}
 .header{
     padding: 15px ;
     background-color: #ffffff;
@@ -59,7 +64,7 @@ header a:hover{
 }
 .nav-show-on-mobile{
     position: absolute;
-    top: 52px;
+    top: 60px;
     right: 10px;
     width: 50%;
     z-index: 1;
@@ -252,6 +257,26 @@ form{
 .form-group textarea{
     overflow: hidden;
 }
+footer{
+    background-color: #002d91;
+    padding: 20px 0px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+footer img{
+    max-width: 120px;
+    /* float: left; */
+}
+footer ul{
+    margin-top: 20px;
+    padding: 0px;
+    text-align: end;
+}
+footer ul li{
+    display: inline;
+    padding: 0px 10px;
+    cursor: pointer;
+}
 @media (max-width:768px){
     .banner{
         background-position:  75% center;
@@ -273,5 +298,8 @@ form{
     }
     form{
         width: 100%;
+    }
+    footer ul{
+        text-align: left;
     }
 }
