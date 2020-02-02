@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gesal</title>
     <link rel="stylesheet" href="./libraries/fontawesome-free-5.12.0-web/css/all.css">
+    <link rel="stylesheet" href="./libraries/fontawesome-free-5.12.0-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="./libraries/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
+
+    <script src="./js/jquery.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="banner">
-            <header>
+            <header class="header">
                 <img src="./images/GESAL logo_blue-15.png" alt="Logo">
                 <span class="fa fa-bars menu"></span>
                 <ul>
@@ -21,12 +24,19 @@
                     <li><a href="#">BLOG</a></li>
                 </ul>
             </header>
+            <div class="nav-show-on-mobile shadow-sm">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#" class="contact">CONTACT US</a></li>
+                    <li><a href="#">BLOG</a></li>
+                </ul>
+            </div>
             <div class="bannerText">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
                             <h1>
-                                Education is the passport to the future, for tomorrow belongs to those who prepare for it today
+                                We have created an amazing product that could serve as an alternative tool for your school’s practical session
                             </h1>
                             <button class="btn">Request for Demo</button>
                         </div>
@@ -37,14 +47,17 @@
         <div class="trust">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 pt-3">
+                    <div class="col-md-2 pt-3">
                         <h3>Trusted by</h3>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <img src="./images/NITDA-e1542187737596.png" alt="">
                     </div>
-                    <div class="col-md-2 pt-3">
+                    <div class="col-md-3 pt-3">
                         <img src="./images/logo.svg" alt="">
+                    </div>
+                    <div class="col-md-3 pt-1">
+                        <img src="./images/cchub.png" alt="">
                     </div>
                 </div>
             </div>
@@ -69,53 +82,51 @@
         <div class="productFeature">
             <div class="container">
                 <h2>Our Awesome Features</h2>
-                <div class="card-columns">
-                    <div class="card">
-                        <span class="fa fa-book-open"></span>
-                      <div class="card-body">
-                        <h5 class="card-title">Designed for k12 education</h5>
-                        <p class="card-text">
-                            GESAL is specifically designed for K-12 education in Nigeria and other African countries. Students from secondary schools in Nigeria and beyond can utilize GESAL as a learning aid in sciences (chemistry, physics, biology) as well as a teaching aid respectively during lectures.
-                            As performances in science subject begins to drop, take advantage of the easy to go application where learning is simplified and mobile.
-                        </p>
-                      </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="fa fa-biking"></span>
+                          <div class="card-body">
+                            <h5 class="card-title">Interactive and hands-on-experience</h5>
+                            <p class="card-text">
+                                Students can visualize complicated diagrams from their textbooks in 3d. Deploy laboratory tools and even perform some selected experiments
+                            </p>
+                          </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <span class="fa fa-desktop"></span>
-                      <div class="card-body">
-                        <h5 class="card-title">Works Offline</h5>
-                        <p class="card-text">
-                            An offline learning app designed for Africa’s internet inaccessibility
-                            Teachers and students can gain maximum value even without internet data
-                        </p>
-                      </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="fa fa-desktop"></span>
+                          <div class="card-body">
+                            <h5 class="card-title">Works Offline</h5>
+                            <p class="card-text">
+                                An offline learning app designed for Africa’s internet accessibility. Teachers and students can gain maximum value even without internet
+                            </p>
+                          </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <span class="fa fa-hand-lizard"></span>
-                      <div class="card-body">
-                        <h5 class="card-title">High Retention rates</h5>
-                        <p class="card-text">
-                            Experiential learning helps to increase students' learning performance thereby increasing knowledge retention. Our mobile app presents the best engagement tools for students and teachers. It also serves as a resource for teachers and mentors.
-                        </p>
-                      </div>
+                    <!-- <br> -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="fa fa-book-open"></span>
+                          <div class="card-body">
+                            <h5 class="card-title">Designed for k12 education</h5>
+                            <p class="card-text">
+                                GESAL is specifically for secondary schools in Nigeria and other African countries. Schools can utilize GESAL as a teaching resources for practical related subjects
+                            </p>
+                          </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <span class="fa fa-biking"></span>
-                      <div class="card-body">
-                        <h5 class="card-title">Interactive and Hands-on-experience</h5>
-                        <p class="card-text">
-                            Students can visualize complicated diagrams from their textbooks in 3d, deploy laboratory tools and even perform some selected experiments while being fully immersed in this activity in a gamified way
-                        </p>
-                      </div>
-                    </div>
-                    <div class="card">
-                        <span class="fa fa-mobile-alt"></span>
-                      <div class="card-body">
-                        <h5 class="card-title">Mobile learning</h5>
-                        <p class="card-text">
-                            Students can learn wherever they are
-                        </p>
-                      </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <span class="fa fa-hand-lizard"></span>
+                          <div class="card-body">
+                            <h5 class="card-title">High Retention rates</h5>
+                            <p class="card-text">
+                                Experiential learning helps to increase students’ learning performance thereby increasing knowledge retention. Our mobile application presents the best engagement tools for students and teachers
+                            </p>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,13 +135,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <span>Want to start exploring</span>
+                        <span class="feedback">Feedback: </span>
                         <h2>
-                            Are you Ready to Get Started?
+                            Connect with us on Twitter and Facebook
                         </h2>
                     </div>
-                    <div class="col-md-5">
-                        <button class="btn">Request for Demo</button>
+                    <div class="col-md-5 socials">
+                        <!-- <button class="btn">Request for Demo</button> -->
+                        <span class="facebook fab fa-facebook-f"></span>
+                        <span class="fab fa-twitter"></span>
                     </div>
                 </div>
             </div>
@@ -138,9 +151,9 @@
         <div class="form">
             <div class="container">
                 <h2>
-                    Request for Demo
+                    Request a demo form
                 </h2>
-                <p>Enter details below to request for demo</p>
+                <p>Let’s meet you</p>
                 <form>
                     <div class="form-row">
                         <div class="col">

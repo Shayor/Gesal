@@ -13,18 +13,28 @@
     background-repeat: none;
     background-attachment: fixed;
 }
-header{
+.header{
     padding: 15px ;
     background-color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    transition: 0.5s all linear;
 }
-header img{
+.header img{
     max-width: 120px;
     /* float: left; */
 }
-header ul{
+.header ul{
     padding-top: 14px;
     float: right;
     /* padding-left: 100px; */
+}
+.fix{
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    /* margin: 0; */
 }
 .menu{
     float: right;
@@ -46,6 +56,33 @@ header a{
 header a:hover{
     text-decoration: none;
     color: #002d91;
+}
+.nav-show-on-mobile{
+    position: absolute;
+    top: 52px;
+    right: 10px;
+    width: 50%;
+    z-index: 1;
+    background-color: #ffffff;
+    border: 1px solid #f2f2f2;
+    /* display: none; */
+    opacity: 0;
+}
+.nav-show-on-mobile li{
+    display: block;
+    text-align: center;
+    padding: 13px 0px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.nav-show-on-mobile ul a{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+.active{
+    /* display: block; */
+    opacity: 1;
 }
 .bannerText{
     padding: 130px 0px 100px;
@@ -74,7 +111,8 @@ header a:hover{
     font-size: 17px;
 }
 .trust img{
-    max-width: 150px;
+    max-width: 180px;
+    /* margin: 0px 10px; */
 }
 .companies{
     margin: 40px 0px;
@@ -110,12 +148,29 @@ header a:hover{
     border: none;
     text-align: center;
     padding: 10px;
+    margin: 10px 0px;
 }
-
+.more-text{
+    visibility: hidden;
+    display: none;
+}
+.dropped{
+    visibility: visible;
+    display: inline-block;
+}
 .productFeature .fa{
     color: #002d91;
     font-size: 30px;
     padding: 20px 0px;
+}
+.productFeature .see-text{
+    color: #002d91;
+    padding: 0px 10px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+.productFeature a .fa{
+    font-size: inherit;
 }
 .productFeature h5, .productFeature p{
     font-family: 'Poppins', sans-serif;
@@ -137,7 +192,7 @@ header a:hover{
     background-color: #002d91;
     padding: 40px 0px;
 }
-.call2Action span{
+.call2Action span.feedback{
     color: white;
     font-size: 13px;
     font-family: 'Poppins', sans-serif;
@@ -145,6 +200,24 @@ header a:hover{
 }
 .call2Action .col-md-5{
     text-align: end;
+}
+.socials{
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.socials span{
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0px 10px;
+    transition: 0.2s all ease;
+}
+.socials span:hover{
+    color: #002d91;
+}
+.socials .facebook{
+    padding:20px 23px;
 }
 .form{
     margin: 30px 0px;
@@ -180,6 +253,9 @@ form{
     overflow: hidden;
 }
 @media (max-width:768px){
+    .banner{
+        background-position:  75% center;
+    }
     .bannerText h1{
         font-size: 32px;
     }
